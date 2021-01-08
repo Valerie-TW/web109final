@@ -1,0 +1,105 @@
+body{
+    overflow-x: hidden;
+}
+.box{ 
+    width: 50%;  
+    height: 200vh;
+    background-color: cadetblue;
+}
+
+.box1{
+    width: 80%;
+    height: 80vh;
+    background-color: darkkhaki;
+    margin-top: 12vh;
+    margin-left: 80px;
+    margin-bottom: 80px;
+    
+}
+
+#footer{
+    height: 30vh;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.footer-text{
+    padding: 60px;
+    text-align: center;
+    color: white;
+}
+
+#list-example{
+    top:0px;
+    left:0px;
+    width:50px;
+}
+
+#list-example a{
+    height:25vh;
+    background-color:rgba(255,255,255,0.1);
+    overflow-wrap: break-word;
+    border:none;
+}
+
+#list-example a.active{
+    background-color:rgba(218, 14, 14, 0.5);
+    color:dodgerblue;
+}
+
+#fisherman{
+    font-size: 80px;
+    color: white;
+    padding: 150px;
+    text-align: center;  
+    height: 140vh;
+    width: 100%;
+    
+}
+
+.gradient{
+    width:100%;
+    height: 300vh;
+    background: -webkit-linear-gradient(black,white);
+    background: -o-linear-gradient(black,white);
+    background: -moz-linear-gradient(black,white);
+    background: linear-gradient(black,white);
+}
+
+.multi-item-carousel{
+    .carousel-inner{
+      > .item{
+        transition: 500ms ease-in-out left;
+      }
+      .active{
+        &.left{
+          left:-33%;
+        }
+        &.right{
+          left:33%;
+        }
+      }
+      .next{
+        left: 33%;
+      }
+      .prev{
+        left: -33%;
+      }
+      @media all and (transform-3d), (-webkit-transform-3d) {
+        > .item{
+          // use your favourite prefixer here
+          transition: 500ms ease-in-out left;
+          transition: 500ms ease-in-out all;
+          backface-visibility: visible;
+          transform: none!important;
+        }
+      }
+    }
+    .carouse-control{
+      &.left, &.right{
+        background-image: none;
+      }
+    }
+  }
+  
